@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObrSlika
+{
+    public class DatabaseContext : DbContext
+    {
+        public DatabaseContext():
+            base ("vlatko")
+        { }
+        public DbSet<Login> Logins { get; set; }
+    }
+    public class Login
+    {
+        public int ID { get; set; }
+        public String Username { get; set; }
+        public String Password { get; set; }
+    }
+}
