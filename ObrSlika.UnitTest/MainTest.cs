@@ -15,6 +15,13 @@ namespace ObrSlika.UnitTest
             Assert.IsTrue(test);
         }
         [TestMethod]
+        public void TestLoginAppVeyor()
+        {
+            login log = new login();
+            Boolean test = log.LoginUser("admin", "admin");
+            Assert.IsFalse(test);
+        }
+        [TestMethod]
         public void TestLogin1()
         {
             login log = new login();
