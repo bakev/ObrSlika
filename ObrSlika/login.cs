@@ -33,6 +33,7 @@ namespace ObrSlika
             }
             else
             {
+                LogFile.WriteWarningLog("Грешка при логирање");
                 MessageBox.Show("Ве молиме проверете го вашето корисничко име или пасвордот");
             }
         }

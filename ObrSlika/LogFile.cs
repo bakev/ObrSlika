@@ -19,20 +19,20 @@ namespace ObrSlika
         {
             CheckIfLogExixts();
             EventLog.WriteEntry(sSource, EventToWrite, EventLogEntryType.Information);
-            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Information " + Environment.NewLine + EventToWrite);
+            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Information " + Environment.NewLine + EventToWrite + Environment.NewLine);
 
         }
         public static void WriteWarningLog(String EventToWrite)
         {
             CheckIfLogExixts();
             EventLog.WriteEntry(sSource, EventToWrite, EventLogEntryType.Warning);
-            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Warning " + Environment.NewLine + EventToWrite);
+            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Warning " + Environment.NewLine + EventToWrite + Environment.NewLine);
         }
         public static void WriteErrorLog(String EventToWrite)
         {
             CheckIfLogExixts();
             EventLog.WriteEntry(sSource, EventToWrite, EventLogEntryType.Error);
-            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Error " + Environment.NewLine + EventToWrite);
+            File.AppendAllText(StartUp + @"/ObrSlikalog.txt", DateTime.Now + " Error " + Environment.NewLine + EventToWrite + Environment.NewLine);
         }
         public static void CheckIfLogExixts()
         {
