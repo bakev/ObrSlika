@@ -47,11 +47,15 @@ namespace ObrSlika
             catch (Exception)
             {
                 throw new ApplicationException("Сликата не може да се отвори");
+
+                LogFile.WriteErrorLog("Проблем со отварање на слика");
             }
+          
         }
 
         private void SobelАлгоритамToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             if (pat_slika == "") MessageBox.Show("Немате одбрано слика, Обидете се повторно");
             else
             {
@@ -61,7 +65,7 @@ namespace ObrSlika
                 Bitmap p = new Bitmap(pat_slika);
                 Bitmap obr = (Bitmap)Sobel_Konvertiraj(p);
                 pBox.Image = new Bitmap(obr);
-
+                LogFile.WriteInformationLog("Обработена слика со Собел Алгоритмот");
             }
         }
         private Bitmap Sobel_Konvertiraj(Bitmap im)
@@ -169,6 +173,7 @@ namespace ObrSlika
                     Bitmap p = new Bitmap(pat_slika);
                     Bitmap obr = (Bitmap)Laplace(p);
                     pBox.Image = new Bitmap(obr);
+                    LogFile.WriteInformationLog("Обработена слика со Лаплас Алгоритмот");
 
                 }
             }

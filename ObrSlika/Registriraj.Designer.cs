@@ -47,7 +47,7 @@
             this.btnRegistriraj.Location = new System.Drawing.Point(293, 107);
             this.btnRegistriraj.Name = "btnRegistriraj";
             this.btnRegistriraj.Size = new System.Drawing.Size(104, 104);
-            this.btnRegistriraj.TabIndex = 0;
+            this.btnRegistriraj.TabIndex = 5;
             this.btnRegistriraj.Text = "Регистрирај се:";
             this.btnRegistriraj.UseVisualStyleBackColor = true;
             this.btnRegistriraj.Click += new System.EventHandler(this.btnRegistriraj_Click);
@@ -75,7 +75,7 @@
             this.txtUserName.Location = new System.Drawing.Point(167, 51);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtUserName.TabIndex = 3;
+            this.txtUserName.TabIndex = 0;
             // 
             // txtPassword
             // 
@@ -83,14 +83,14 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 1;
             // 
             // btnVratiVoNajava
             // 
             this.btnVratiVoNajava.Location = new System.Drawing.Point(418, 107);
             this.btnVratiVoNajava.Name = "btnVratiVoNajava";
             this.btnVratiVoNajava.Size = new System.Drawing.Size(104, 104);
-            this.btnVratiVoNajava.TabIndex = 5;
+            this.btnVratiVoNajava.TabIndex = 6;
             this.btnVratiVoNajava.Text = "Најави се:";
             this.btnVratiVoNajava.UseVisualStyleBackColor = true;
             this.btnVratiVoNajava.Click += new System.EventHandler(this.btnVratiVoNajava_Click);
@@ -100,21 +100,21 @@
             this.txtIme.Location = new System.Drawing.Point(167, 126);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(100, 20);
-            this.txtIme.TabIndex = 7;
+            this.txtIme.TabIndex = 2;
             // 
             // txtPrezime
             // 
             this.txtPrezime.Location = new System.Drawing.Point(167, 163);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(100, 20);
-            this.txtPrezime.TabIndex = 8;
+            this.txtPrezime.TabIndex = 3;
             // 
             // txtMeil
             // 
             this.txtMeil.Location = new System.Drawing.Point(167, 202);
             this.txtMeil.Name = "txtMeil";
             this.txtMeil.Size = new System.Drawing.Size(100, 20);
-            this.txtMeil.TabIndex = 9;
+            this.txtMeil.TabIndex = 4;
             // 
             // label3
             // 
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegistriraj);
             this.Name = "Registriraj";
-            this.Text = "Registriraj";
+            this.Text = "Регистрирај";
             this.ResumeLayout(false);
             this.PerformLayout();
 

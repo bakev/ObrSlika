@@ -23,7 +23,7 @@ namespace ObrSlika
             if (String.IsNullOrEmpty(txtUserName.Text) || String.IsNullOrEmpty(txtPassword.Text) || String.IsNullOrEmpty(txtIme.Text)|| String.IsNullOrEmpty(txtPrezime.Text) || String.IsNullOrEmpty(txtMeil.Text))
             {
                 MessageBox.Show("Ве молиме потполнете ги соодветните полиња.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                LogFile.WriteWarningLog("Пробано да се регистрира корисник ,но проблем празно поле");
             }
             else
             {
@@ -42,6 +42,7 @@ namespace ObrSlika
                         db.Logins.Add(obj);
                         db.SaveChanges();
                         MessageBox.Show("Корисникот е регистриран");
+                        LogFile.WriteInformationLog("Внесен е нов корисник");
                     }
                 }
                 catch(Exception)
