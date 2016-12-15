@@ -39,6 +39,7 @@ namespace ObrSlika
                     pBox.Image = new Bitmap(open.FileName);
 
                 }
+                LogFile.WriteInformationLog("Korisnikot otvori slika");
 
 
             }
