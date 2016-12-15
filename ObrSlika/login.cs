@@ -35,9 +35,6 @@ namespace ObrSlika
             {
                 MessageBox.Show("Ве молиме проверете го вашето корисничко име или пасвордот");
             }
-
-
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
