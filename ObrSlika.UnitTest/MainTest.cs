@@ -14,13 +14,7 @@ namespace ObrSlika.UnitTest
             Boolean test = log.LoginUser("admin", "admin");
             Assert.IsTrue(test);
         }
-        [TestMethod]
-        public void TestLoginAppVeyor()
-        {
-            login log = new login();
-            Boolean test = log.LoginUser("admin", "admin");
-            Assert.IsFalse(test);
-        }
+      
         [TestMethod]
         public void TestLogin1()
         {
@@ -34,6 +28,13 @@ namespace ObrSlika.UnitTest
         {
             login log = new login();
             Boolean test2 = log.LoginUser("student", "admin");
+            Assert.IsFalse(test2);
+        }
+        [TestMethod]
+        public void TestLogin4()
+        {
+            login log = new login();
+            Boolean test2 = log.LoginUser("", "");
             Assert.IsFalse(test2);
         }
 
