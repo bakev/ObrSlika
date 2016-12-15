@@ -8,7 +8,7 @@ namespace ObrSlika.UnitTest
     public class MainTest
     {
         [TestMethod]
-        public void TestLogin()
+        public void TestSoVnesenKorisnik()
         {
             login log = new login();
             Boolean test = log.LoginUser("admin", "admin");
@@ -16,7 +16,7 @@ namespace ObrSlika.UnitTest
         }
       
         [TestMethod]
-        public void TestLogin1()
+        public void TestSoGresenPass()
         {
             login log = new login();
             Boolean test1 = log.LoginUser("admin", "kosarkar");
@@ -24,18 +24,26 @@ namespace ObrSlika.UnitTest
         }
 
         [TestMethod]
-        public void TestLogin3()
+        public void TestSoGresenUserName()
         {
             login log = new login();
             Boolean test2 = log.LoginUser("student", "admin");
             Assert.IsFalse(test2);
         }
         [TestMethod]
-        public void TestLogin4()
+        public void TestSoPrazniVrednosti()
         {
             login log = new login();
-            Boolean test2 = log.LoginUser("", "");
-            Assert.IsFalse(test2);
+            Boolean test3 = log.LoginUser("", "");
+            Assert.IsFalse(test3);
+        }
+
+        [TestMethod]
+        public void TestSoDolgiVrednosti()
+        {
+            login log = new login();
+            Boolean test4 = log.LoginUser("Testot so dolgi vrednosti", "Testot so dolgi vrednosti");
+            Assert.IsFalse(test4);
         }
 
     }
