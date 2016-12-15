@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace ObrSlika
     }
     public class Login
     {
-        public int ID { get; set; }
+        [Key]
         public String Username { get; set; }
         public String Password { get; set; }
         public String Ime { get; set; }

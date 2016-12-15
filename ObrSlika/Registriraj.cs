@@ -27,19 +27,28 @@ namespace ObrSlika
             }
             else
             {
-                using (var db = new DatabaseContext())
+                try
                 {
-                    Login obj = new Login
+                    using (var db = new DatabaseContext())
                     {
-                        Username = txtUserName.Text,
-                        Password = txtPassword.Text,
-                        Ime=txtIme.Text,
-                        Prezime=txtPrezime.Text,
-                        Email=txtMeil.Text
-                    };
-                    db.Logins.Add(obj);
-                    db.SaveChanges();
-                    MessageBox.Show("Корисникот е регистриран");
+                        Login obj = new Login
+                        {
+                            Username = txtUserName.Text,
+                            Password = txtPassword.Text,
+                            Ime = txtIme.Text,
+                            Prezime = txtPrezime.Text,
+                            Email = txtMeil.Text
+                        };
+                        db.Logins.Add(obj);
+                        db.SaveChanges();
+                        MessageBox.Show("Корисникот е регистриран");
+                    }
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("UserName веќе постои");
+
+                    LogFile.WriteErrorLog("Внесен корисник со постеечки UserName");
                 }
             }
         }
