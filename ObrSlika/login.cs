@@ -14,7 +14,7 @@ namespace ObrSlika
     public partial class login : Form
     {
 
-
+        
         public login()
         {
             InitializeComponent();
@@ -22,9 +22,11 @@ namespace ObrSlika
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             Boolean user = LoginUser(UsernameText.Text, PasswordText.Text);
             if (user == true)
             {
+                LogFile.WriteInformationLog("Najaven Korisnik");
                 this.Hide();
                 Slika ss = new Slika();
                 ss.Show();
@@ -34,26 +36,9 @@ namespace ObrSlika
             {
                 MessageBox.Show("Ве молиме проверете го вашето корисничко име или пасвордот");
             }
-            /*
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-GQD9QG2\\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count (*)  from login1 where USERNAME ='" + textBox2.Text + "' and Password ='" + textBox1.Text + "'" , con );
-        
-                DataTable dt = new DataTable();
+            
 
- 
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
-            {
-                this.Hide();
 
-                Slika ss = new Slika();
-                ss.Show();
-            }
-            else
-            {
-                MessageBox.Show("Ве молиме проверете го вашето корисничко име или пасвордот");
-            }
-            */
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -85,6 +70,15 @@ namespace ObrSlika
             this.Hide();
             obj1.ShowDialog();
             this.Show();
+        }
+
+        private void PasswordText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Return)
+            {
+                e.SuppressKeyPress = true;
+                btnLogin.PerformClick();
+            }
         }
     }
 }

@@ -19,5 +19,8 @@ namespace ObrSlika
         public int ID { get; set; }
         public String Username { get; set; }
         public String Password { get; set; }
+        public String Ime { get; set; }
+        public String Prezime { get; set; }
+        public String Email { get; set; }
     }
 }

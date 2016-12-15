@@ -70,42 +70,44 @@
             // 
             this.PasswordText.Location = new System.Drawing.Point(287, 110);
             this.PasswordText.Name = "PasswordText";
+            this.PasswordText.PasswordChar = '*';
             this.PasswordText.Size = new System.Drawing.Size(100, 20);
-            this.PasswordText.TabIndex = 3;
+            this.PasswordText.TabIndex = 1;
+            this.PasswordText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordText_KeyDown);
             // 
             // UsernameText
             // 
             this.UsernameText.Location = new System.Drawing.Point(287, 56);
             this.UsernameText.Name = "UsernameText";
             this.UsernameText.Size = new System.Drawing.Size(100, 20);
-            this.UsernameText.TabIndex = 4;
+            this.UsernameText.TabIndex = 0;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(196, 213);
+            this.btnLogin.Location = new System.Drawing.Point(196, 172);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Size = new System.Drawing.Size(75, 43);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Најави се";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(312, 213);
+            this.btnExit.Location = new System.Drawing.Point(312, 172);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 6;
+            this.btnExit.Size = new System.Drawing.Size(75, 43);
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Одјави се ";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnRegistriraj
             // 
-            this.btnRegistriraj.Location = new System.Drawing.Point(83, 213);
+            this.btnRegistriraj.Location = new System.Drawing.Point(18, 172);
             this.btnRegistriraj.Name = "btnRegistriraj";
-            this.btnRegistriraj.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistriraj.TabIndex = 8;
+            this.btnRegistriraj.Size = new System.Drawing.Size(140, 43);
+            this.btnRegistriraj.TabIndex = 2;
             this.btnRegistriraj.Text = "Регистрирај се";
             this.btnRegistriraj.UseVisualStyleBackColor = true;
             this.btnRegistriraj.Click += new System.EventHandler(this.btnRegistriraj_Click);
@@ -114,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 261);
+            this.ClientSize = new System.Drawing.Size(455, 240);
             this.Controls.Add(this.btnRegistriraj);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);

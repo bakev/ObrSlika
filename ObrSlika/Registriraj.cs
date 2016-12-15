@@ -19,17 +19,35 @@ namespace ObrSlika
 
         private void btnRegistriraj_Click(object sender, EventArgs e)
         {
-            using (var db = new DatabaseContext())
+       
+            if (String.IsNullOrEmpty(txtUserName.Text) || String.IsNullOrEmpty(txtPassword.Text) || String.IsNullOrEmpty(txtIme.Text)|| String.IsNullOrEmpty(txtPrezime.Text) || String.IsNullOrEmpty(txtMeil.Text))
             {
-                Login obj = new Login
-                {
-                    Username = txtUserName.Text,
-                    Password = txtPassword.Text
-                };
-                db.Logins.Add(obj);
-                db.SaveChanges();
-                MessageBox.Show("Корисникот е регистриран");
+                MessageBox.Show("Ве молиме потполнете ги соодветните полиња.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
+            else
+            {
+                using (var db = new DatabaseContext())
+                {
+                    Login obj = new Login
+                    {
+                        Username = txtUserName.Text,
+                        Password = txtPassword.Text,
+                        Ime=txtIme.Text,
+                        Prezime=txtPrezime.Text,
+                        Email=txtMeil.Text
+                    };
+                    db.Logins.Add(obj);
+                    db.SaveChanges();
+                    MessageBox.Show("Корисникот е регистриран");
+                }
+            }
+        }
+
+        private void btnVratiVoNajava_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           
         }
     }
 }
