@@ -14,7 +14,7 @@ namespace ObrSlika
     public partial class login : Form
     {
 
-        
+
         public login()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ObrSlika
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
             Boolean user = LoginUser(UsernameText.Text, PasswordText.Text);
             if (user == true)
             {
@@ -30,13 +30,12 @@ namespace ObrSlika
                 this.Hide();
                 Slika ss = new Slika();
                 ss.Show();
-
             }
             else
             {
                 MessageBox.Show("Ве молиме проверете го вашето корисничко име или пасвордот");
             }
-            
+
 
 
         }
@@ -74,7 +73,7 @@ namespace ObrSlika
 
         private void PasswordText_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Return)
+            if (e.KeyCode == Keys.Return)
             {
                 e.SuppressKeyPress = true;
                 btnLogin.PerformClick();
