@@ -45,7 +45,14 @@ namespace ObrSlika.UnitTest
             Boolean test4 = log.LoginUser("Testot so dolgi vrednosti", "Testot so dolgi vrednosti");
             Assert.IsFalse(test4);
         }
+        [TestMethod]
+        public void TestSoprazenPass()
+        {
+            login log = new login();
+            Boolean test5 = log.LoginUser("Testot so dolgi vrednosti","");
+            Assert.IsFalse(test5);
+        }
 
-        
+
     }
 }
