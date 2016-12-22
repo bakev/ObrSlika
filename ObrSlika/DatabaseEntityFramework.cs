@@ -15,6 +15,7 @@ namespace ObrSlika
         { }
         public DbSet<Login> Logins { get; set; }
     }
+
     public class Login
     {
         [Key]

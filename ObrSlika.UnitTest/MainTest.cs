@@ -46,5 +46,6 @@ namespace ObrSlika.UnitTest
             Assert.IsFalse(test4);
         }
 
+        
     }
 }
